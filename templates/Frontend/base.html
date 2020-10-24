@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Salasah</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/salasah.png' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        {% block navigation %}
+        {% endblock %}
+        <!-- Masthead-->
+        {% block masthead %}
+        {% endblock %}
+        <!-- Portfolio Section-->
+        {% block portfolio %}
+        {% endblock %}
+        <!-- About Section-->
+        {% block about %}
+        {% endblock %}
+        <!-- Contact Section-->
+        {% block contact %}
+        {% endblock %}
+        <!-- Footer-->
+        {% block footer %}
+        {% endblock %}
+        <!-- Copyright Section-->
+        {% block copyright %}
+        {% endblock %}
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
+        {% block portofoliomodals1 %}
+        {% endblock %}
+        <!-- Portfolio Modal 2-->
+        {% block portofoliomodals2 %}
+        {% endblock %}
+        <!-- Portfolio Modal 3-->
+        {% block portofoliomodals3 %}
+        {% endblock %}
+        <!-- Portfolio Modal 4-->
+        {% block portofoliomodals4 %}
+        {% endblock %}
+        <!-- Portfolio Modal 5-->
+        {% block portofoliomodals5 %}
+        {% endblock %}
+        <!-- Portfolio Modal 6-->
+        {% block portofoliomodals6 %}
+        {% endblock %}
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="{% static 'assets/mail/jqBootstrapValidation.js' %}"></script>
+        <script src="{% static 'assets/mail/contact_me.js' %}"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>

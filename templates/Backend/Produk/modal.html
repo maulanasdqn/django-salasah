@@ -1,0 +1,80 @@
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form class="tambahproduk">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+              <label for="nama">Nama</label>
+              <input type="text" id="produk_nama" name="nama" placeholder="Masukan Nama" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="harga_beli">Harga Beli</label>
+            <input type="text" id="harga_beli" name="harga_beli" placeholder="Masukan Harga Beli" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="harga_jual">Harga Jual</label>
+            <input type="text" id="harga_jual" name="harga_jual" placeholder="Masukan Harga Jual" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="kategori">Kategori</label>
+            <select id="kategori" name="kategori"  class="form-control">
+                <option value="">Pilih Kategori</option>
+                {% for kategori in kategori %}
+                <option value="{{ kategori.id }}">{{ kategori.nama }}</option>
+                {% endfor %}
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="kategori">Bahan</label>
+            <select id="bahan" name="bahan"  class="form-control">
+                <option value="">Pilih Bahan</option>
+                {% for bahan in bahan %}
+                <option value="{{ bahan.id }}">{{ bahan.nama }}</option>
+                {% endfor %}
+            </select>
+          </div>
+          <div class="form-group">
+              <label for="berat">Berat (Gram) </label>
+              <input  type="number" id="berat" name="berat" class="form-control" placeholder="Masukan Berat">
+            </div>
+            <!-- <div class="form-group">
+                <label for="varian">Pilih Varian</label>
+                <select multiple class="form-control" id="varian">
+                    {%  for varian in varian %}
+                  <option value="{{ varian.id }}">{{ varian.nama }}</option>
+                  {% endfor %}
+                </select>
+              </div> -->
+          <div class="form-group">
+            <label for="deskripsi">Deskripsi</label>
+            <textarea type="text" name="deskripsi" id="deskripsi" class="form-control" placeholder="Masukan Deskripsi"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="kode_barang">Kode Barang</label>
+            <select id="kode_barang" name="kode_barang"  class="form-control">
+                <option value="">Pilih Kode Barang</option>
+                {% for kode_barang in kode_barang %}
+                <option value="{{ kode_barang.id }}">{{ kode_barang.kode_barang }}</option>
+                {% endfor %}
+            </select>
+          </div>
+          <!-- <div class="form-group">
+              <label for="gambar">Gambar</label>
+              <input type="file" name="gambar" class="form-control" id="gambar">
+          </div> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+          <button type="submit" class="btn btn-primary">Simpan</button>
+        </div>
+    </div>
+    </form>
+</div>
+  </div>

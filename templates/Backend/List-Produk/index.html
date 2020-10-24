@@ -1,0 +1,48 @@
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <h3>Halam Produk</h3>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><span class="fa fa-plus mr-3">Tambah</span></button>
+                <table id="books-table" class="table">
+                    <thead>
+                    <tr>
+                    <th class="text-center" scope="col">No</th>
+                    <th class="text-center" scope="col">Judul</th>
+                    <th class="text-center" scope="col">Harga Beli</th>
+                    <th class="text-center" scope="col">Harga Jual</th>
+                    <th class="text-center" scope="col">Bahan </th>
+                    <th class="text-center" scope="col">Berat(gram)</th>
+                    <th class="text-center" scope="col">Read / Update / Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for produk in produk %}
+                    <tr>
+                        <th class="text-center" scope="row">{{ forloop.counter }}</th>
+                        <td class="text-center">{{ produk.judul }}</td>
+                        <td class="text-center">{{ produk.harga_beli }}</td>
+                        <td class="text-center">{{ produk.harga_jual }}</td>
+                        <td class="text-center">{{ produk.bahan }}</td>
+                        <td class="text-center">{{ produk.berat }}</td>
+                        <td class="text-center">
+                        <!-- Read book buttons -->
+                        <button type="button" class="bs-modal read-book btn btn-sm btn-primary" data-form-url="">
+                            <span class="fa fa-eye"></span>
+                        </button>
+                        <!-- Update book buttons -->
+                        <button type="button" class="update-book btn btn-sm btn-primary" data-form-url="">
+                            <span class="fa fa-pencil-alt"></span>
+                        </button>
+                        <!-- Delete book buttons -->
+                        <button type="button" class="bs-modal delete-book btn btn-sm btn-danger" data-form-url="">
+                            <span class="fa fa-trash"></span>
+                        </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                {% include 'Backend/List-Produk/Create-Produk/create.html' %}
+            </div>
+        </div>
+    </div>

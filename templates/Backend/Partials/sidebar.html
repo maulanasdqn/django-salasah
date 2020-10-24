@@ -1,0 +1,23 @@
+{% load static %}
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    {% include 'Backend/Partials/Sidebar/Logo/logo.html' %}
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+    {% include 'Backend/Partials/Sidebar/User/user.html' %}
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+    {% include 'Backend/Partials/Sidebar/Menu/menu.html' %}
+    {% include 'Backend/Partials/Sidebar/Endmenu/endmenu.html' %}
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
